@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {
+  TouchableHighlight,
+  TextInput,
 	Image,
 	StyleSheet,
 	Text,
@@ -15,7 +17,21 @@ class Login extends Component {
 			<Text style={styles.heading}>
 				Github browser
 			</Text>
-    	</View>
+
+      <TextInput style={styles.input}
+        placeholder = "Github username" />
+      <TextInput style={styles.input}
+        placeholder = "Github password"
+        secureTextEntry />
+
+      <TouchableHighlight 
+        style={styles.button}>
+        <Text style={styles.buttonText}>
+          Log in
+        </Text>
+      </TouchableHighlight>
+
+      </View>
     );
   }
 }
@@ -26,6 +42,7 @@ const styles = StyleSheet.create({
      alignItems: 'center',
      paddingTop: 40,
      backgroundColor: '#F5FCFF',
+     padding: 10
      // justifyContent: 'center',
   },
   logo: {
@@ -35,6 +52,28 @@ const styles = StyleSheet.create({
   heading: {
   	fontSize: 30,
   	marginTop: 10
+  },
+  input: {
+    height: 50,
+    marginTop: 10,
+    padding: 4,
+    fontSize: 18,
+    borderWidth: 1,
+    borderColor: '#48bbec'
+
+  },
+  button: {
+    height: 50,
+    backgroundColor: '#48BBEC',
+    alignSelf: 'stretch',
+    marginTop: 10,
+    justifyContent: 'center'
+  },
+  buttonText: {
+    fontSize: 22,
+    color: '#FFF',
+    textAlign: 'center'
+    // alignSelf: 'canter'
   }
 }); 
 
